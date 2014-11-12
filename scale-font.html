@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8"> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+   		jQuery(document).ready(function($) {
+   			var divs = $('.foo').map(function( i, e) {
+   				return $( e ).width();
+   			}).get();
+   			//console.log(divs);
+
+   			var $currentElem;
+			$(divs).each(function() {
+				$currentElem = $(this);
+				ws = $currentElem[0];
+				
+			});
+			mx = Math.max(ws);
+			//console.log(mx);
+   			if (mx > 150) {
+   				$('span').css('font-size', );
+   			}
+   		});
+	</script>
+	<style type="text/css" media="screen">
+		.foo {
+			width: 150px;
+			height: 150px;
+			background-color: #ccc;
+			font-size: 28px;
+			margin-bottom: 20px;
+			display: table;
+		}
+		span {
+			display: table-cell;
+		}
+	</style>
+</head>
+<body>
+	<div class="foo">
+		<span>alljasdf alkdsjf aslj aslkfj sd</span>
+	</div>
+	<div class="foo">
+		<span>alljasdfalkdsjf aslj aslkfj sd</span>
+	</div>
+</body>
+</html>
